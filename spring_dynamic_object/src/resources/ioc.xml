@@ -1,0 +1,11 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="p" class="spring_dynamic_object.Iphone">
+		<property name="Sim" ref="airtel"></property>
+	
+	</bean>		<!-- Class.forName("spring_dynamic_object.RedMi").newInstance(); -->
+	<bean id="airtel" class="spring_dynamic_object.AirtelSim"></bean>  <!-- Class.forName("spring_dynamic_object.AirtelSim").newInstance(); -->
+	<bean id="jio" class="spring_dynamic_object.JioSim"></bean>    <!-- Class.forName("spring_dynamic_object.JioSim").newInstance(); -->
+	<bean class="spring_dynamic_object.IdeaSim"></bean> <!-- Class.forName("spring_dynamic_object.IdeaSim").newInstance(); -->
+</beans>
