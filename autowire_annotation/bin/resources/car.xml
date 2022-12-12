@@ -1,0 +1,28 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+	
+	<context:annotation-config />
+	
+	<bean id="f1" class="dao.Fuel">
+		<property name="fuelName" value="Petrol" />
+	</bean>
+	<bean id="f2" class="dao.Fuel" autowire-candidate="false">
+		<property name="fuelName" value="Diesel" />
+	</bean>
+	<bean id="e" class="service.Engine">
+	</bean>
+	<bean id="c" class="controller.Car">
+	</bean>
+	<!-- activates @Autowired annotation -->
+	<!-- <bean
+		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+
+ -->
+
+</beans>

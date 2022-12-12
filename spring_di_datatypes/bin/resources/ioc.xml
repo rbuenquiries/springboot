@@ -1,0 +1,51 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="p" class="beans.Phone">
+		<constructor-arg value="Motorola" index="0" />
+		<constructor-arg value="G60" index="1" />
+		<constructor-arg value="89000" index="3" />
+		<constructor-arg value="2021" index="2" />
+
+		<property name="name" value="Iphone" />
+		<property name="model" value="Iphone-14" />
+		<property name="modelyear" value="2022" />
+		<property name="price" value="90000" />
+
+
+		<property name="contacts">
+			<list>
+				<value>9182662482</value>
+				<value>7207119012</value>
+				<value>7207119012</value>
+			</list>
+		</property>
+		<property name="audiolist">
+			<list>
+				<value>BBtrack-1</value>
+				<value>BBtrack-2</value>
+			</list>
+		</property>
+
+		<property name="whatsappcontacts">
+			<set>
+				<value>9182662482</value>
+				<value>7207119012</value>
+				<value>9182662482</value>
+				<value>7207119012</value>
+			</set>
+		</property>
+		<property name="actormovie">
+			<map>
+				<entry key="BB-1" value="Prabas" />
+				<entry key="BB-2" value="Prabas" />
+				<entry key="RRR" value="NTR" />
+			</map>
+		</property>
+
+
+	</bean>
+
+
+</beans>

@@ -1,0 +1,17 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="f1" class="dao.Fuel">
+		<property name="fuelName" value="Petrol" />
+	</bean>
+	<bean id="f2" class="dao.Fuel" autowire-candidate="false">
+		<property name="fuelName" value="Diesel" />
+	</bean>
+	<bean id="e" class="service.Engine" autowire="constructor">
+	</bean>
+	<bean id="c" class="controller.Car" autowire="constructor">
+	</bean>
+
+
+
+</beans>
