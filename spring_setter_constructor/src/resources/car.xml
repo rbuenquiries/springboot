@@ -1,0 +1,20 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="e" class="beans.Engine"></bean>
+	<bean id="b" class="beans.Battery"></bean>
+	<bean class="beans.Car">
+		<constructor-arg ref="b" index="1"></constructor-arg>
+		<property name="audio" ref="a"></property>
+		<property name="roofRails" ref="r"></property>
+
+		<constructor-arg ref="e" index="0"></constructor-arg>
+
+
+	</bean>
+
+
+	<bean id="a" class="beans.Audio"></bean>
+	<bean id="r" class="beans.RoofRails"></bean>
+</beans>
