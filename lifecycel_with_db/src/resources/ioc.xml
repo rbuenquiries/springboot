@@ -1,0 +1,12 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="st" class="com.rbu.dao.StudentDao" init-method="conInit" destroy-method="conDestroy">
+		<property name="driver" value="oracle.jdbc.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+		<property name="user" value="system"/>
+		<property name="password" value="admin"/>
+	
+	</bean>
+
+</beans>
