@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.2//EN" "http://java.sun.com/j2ee/dtds/web-app_2_2.dtd">
+<web-app id="WebApp_ID">
+	<display-name>helloworld</display-name>
+	
+	
+	<servlet>
+		<servlet-name>AbcdJava</servlet-name>
+		<display-name>AbcdJava</display-name>
+		<servlet-class>web.AbcdJava</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>AbcdJava</servlet-name>
+		<url-pattern>/abcdlink</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AbcdJava</servlet-name>
+		<url-pattern>/xyzlink</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AbcdJava</servlet-name>
+		<url-pattern>/lmnlink</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AbcdJava</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+</web-app>
