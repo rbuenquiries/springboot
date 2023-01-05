@@ -1,0 +1,35 @@
+	<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+<!-- map req to your class here -->
+<!-- Front end to backend tacking care by default handlermapping-->
+<!-- default HM -->
+<!-- <bean name="/register.rbu" class="web.RegController"/> -->
+
+  <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+       <property name="mappings">
+           <props>
+               <prop key="/employee.rbu">reg-cont</prop>
+               <prop key="/student.rbu">reg-cont</prop>
+           </props>
+       </property>
+   </bean>    
+
+
+
+
+ <bean id="reg-cont" class="web.RegController">
+  <property name="methodNameResolver">
+         <bean class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+        	<property name="prefix" value="reg"/>
+        	<property name="suffix" value="data"/>
+         </bean>    
+     </property>
+ </bean>
+<!-- backend to front end -->
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<property name="prefix" value="/WEB-INF/views/"/>
+	<property name="suffix" value=".jsp"/>
+</bean>
+
+</beans>
