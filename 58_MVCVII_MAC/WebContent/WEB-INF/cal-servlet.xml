@@ -1,0 +1,34 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+    <!-- HM -->
+   <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+       <property name="mappings">
+           <props>
+               <prop key="/add.abc">cc</prop>
+               <prop key="/sub.abc">cc</prop>
+           </props>
+           
+       </property>
+   </bean>    
+    
+    <!-- controller mapping -->
+    <bean id="cc" class="controller.MathController">
+     <property name="methodNameResolver">
+         <bean class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+        	<property name="prefix" value="Math"/>
+        	<property name="suffix" value="Cal"/>
+         </bean>    
+     </property>
+     </bean>   
+    
+    <!-- view resolver -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+   			<!-- set location of output page using prefix-->
+   			<property name="prefix" value="/WEB-INF/views/"/>
+   			<!-- set page ext of output page using suffix-->
+   			<property name="suffix" value=".jsp"/>     
+    </bean>
+    
+</beans>
