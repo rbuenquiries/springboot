@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    password: root
+    url: jdbc:mysql://localhost:3306/loginuserdb
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  security:
+    oauth2:
+      client:
+        registration:
+         google:
+          clientId: your client id
+          clientSecret: your client secret
+          scope:
+           - email
+           - profile
+server:
+  port: 9090
+#goto google link to create clientid and clientsecret https://console.cloud.google.com/apis/credentials/oauthclient/771413068717-bbuamkv85u7acabs0c5tn6mlfac1744p.apps.googleusercontent.com?project=principal-media-243713
