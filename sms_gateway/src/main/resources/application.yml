@@ -1,0 +1,21 @@
+server:
+  port: 5000
+
+eureka:
+  instance:
+   hostname: localhost
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: HELLO-SERVICE
+          uri: http://localhost:9100/
+          predicates:
+            - Path=/hello/**
+        - id: HAI-SERVICE
+          uri: http://localhost:9000/
+          predicates:
+            - Path=/hai/** 
